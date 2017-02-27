@@ -9,10 +9,10 @@ import com.infullmobile.learnmvpgithub.presentation.counter.CounterActivity
 import dagger.Component
 
 class CounterGraph(activity: CounterActivity) {
-    /*private val builder: DaggerCounterGraph_CounterComponent.Builder
+    private val builder: DaggerCounterGraph_CounterComponent.Builder
 
     init {
-        Dagg
+
         this.builder = DaggerCounterGraph_CounterComponent
                 .builder()
                 .applicationComponent(Components.from(activity.application))
@@ -32,5 +32,5 @@ class CounterGraph(activity: CounterActivity) {
     @Component(dependencies = arrayOf(ApplicationComponent::class), modules = arrayOf(CounterModule::class))
     interface CounterComponent {
         fun inject(activity: CounterActivity)
-    }*/
+    }
 }

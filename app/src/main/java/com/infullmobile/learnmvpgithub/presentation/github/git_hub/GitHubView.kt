@@ -8,19 +8,27 @@ import android.view.ViewGroup
 import com.infullmobile.android.infullmvp.PresentedActivityView
 import com.infullmobile.learnmvpgithub.R
 import com.infullmobile.learnmvpgithub.domain.model.Repo
+import com.infullmobile.learnmvpgithub.repository.model.RepoEntity
 
-open class GitHubView()
+open class GitHubView(private val gitHubAdapter: GitHubAdapter)
     : PresentedActivityView<GitHubPresenter>() {
 
     @LayoutRes override val layoutResId = R.layout.activity_github
     val recycler: RecyclerView by bindView(R.id.gitHubRecycler)
 
     override fun onViewsBound() {
+        initRecycler()
     }
 
-    public fun initRecycler(list:List<Repo>) {
-        recycler.layoutManager = LinearLayoutManager(context)
-        recycler.adapter = GitHubAdapter(context, list)
+    public fun initRecycler() {
+//        recycler.layoutManager = LinearLayoutManager(context)
+        recycler.adapter = gitHubAdapter
+    }
+
+    fun displayRepoList(reposList: List<Repo>?) {
+        if (reposList != null) {
+            gitHubAdapter.setData(reposList)
+        }
     }
 }
 
