@@ -5,11 +5,8 @@ import java.util.*
 
 open class GitHubModel() {
     fun getDummy(count: Int): List<Repo> {
-        val list = ArrayList<Repo>()
-        for (i in 0..count) {
-            list.add(getDummyItem(i))
-        }
-        return
+        val list = (0..count).map { getDummyItem(it) }
+        return list
     }
 
     fun getDummyItem(i: Int): Repo {

@@ -1,8 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.infullmobile.learnmvpgithub.presentation.github.git_hub.GitHubActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/gitHubRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</FrameLayout>
+</RelativeLayout>
