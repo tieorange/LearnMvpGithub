@@ -5,7 +5,6 @@ import com.infullmobile.learnmvpgithub.presentation.application.di.ApplicationCo
 
 class ApplicationGraph(counterApplication: CounterApplication) {
 //    private val  componentBuilder:
-
    /* fun getComponent(): ApplicationComponent {
         return componentBuilder.build()
     }*/

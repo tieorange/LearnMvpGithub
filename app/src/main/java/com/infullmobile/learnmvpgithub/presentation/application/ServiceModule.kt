@@ -1,10 +1,12 @@
 package com.infullmobile.learnmvpgithub.presentation.application
 
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.infullmobile.learnmvpgithub.services.GitHubService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -19,6 +21,17 @@ class ServiceModule {
                 .build()
 
         return retrofit.create(GitHubService::class.java)
+    }
+
+    @Provides fun providesGson(): Gson {
+        return GsonBuilder()
+                .create()
+    }
+
+    @Provides fun providesOkHttpClient(): OkHttpClient {
+        return OkHttpClient().newBuilder().
+                addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                .build()
     }
 
     companion object {
