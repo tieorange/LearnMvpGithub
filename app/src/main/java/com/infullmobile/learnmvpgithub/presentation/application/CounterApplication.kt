@@ -10,11 +10,11 @@ class CounterApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        applicationComponent = buildComponent()
+//        applicationComponent = buildComponent()
     }
-
+/*
     private fun buildComponent(): ApplicationComponent {
         return ApplicationGraph(this).getComponent()
-    }
+    }*/
 }
 

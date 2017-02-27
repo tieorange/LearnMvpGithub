@@ -3,13 +3,11 @@ package com.infullmobile.learnmvpgithub.presentation.counter.di;
 import android.support.annotation.VisibleForTesting;
 
 import com.infullmobile.learnmvpgithub.presentation.counter.CounterActivity;
-import com.infullmobile.learnmvpgithub.presentation.counter.application.di.ApplicationComponent;
-import com.infullmobile.learnmvpgithub.presentation.counter.application.di.Components;
 
 import dagger.Component;
 
 public class CounterGraph {
-
+/*
 	private final DaggerCounterGraph_CounterComponent.Builder builder;
 
 	public CounterGraph(CounterActivity activity) {
@@ -35,5 +33,5 @@ public class CounterGraph {
 	)
 	public interface CounterComponent {
 		void inject(CounterActivity activity);
-	}
+	}*/
 }

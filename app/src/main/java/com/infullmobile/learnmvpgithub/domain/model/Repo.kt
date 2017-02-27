@@ -1,5 +1,5 @@
 package com.infullmobile.learnmvpgithub.domain.model
 
-class Repo {
+class Repo(var name: String) {
 
 }

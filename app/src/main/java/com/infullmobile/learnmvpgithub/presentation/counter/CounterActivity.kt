@@ -15,14 +15,14 @@ class CounterActivity : InFullMvpActivity<CounterPresenter, CounterView>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        counterGraph = CounterGraph(this)
+//        counterGraph = CounterGraph(this)
     }
 
     override val presenter: CounterPresenter get() = counterPresenter
     override val presentedView: CounterView get() = counterView
 
     override fun injectIntoGraph() {
-        counterGraph.inject(this)
+//        counterGraph.inject(this)
     }
 
     companion object {
