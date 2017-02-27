@@ -12,8 +12,13 @@ open class CounterPresenter(private val model: CounterModel,
         counter = model.counter
     }
 
-    fun incrementCounter(){
+    fun incrementCounter() {
         counter++
+        presentedView.displayCounter(counter)
+    }
+
+    fun decrementCounter() {
+        counter--
         presentedView.displayCounter(counter)
     }
 }

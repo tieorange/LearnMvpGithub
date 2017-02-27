@@ -33,6 +33,13 @@ dependencies {
     compile dagger
     kapt daggerCompiler
 
+    compile loggingInterceptor
+    compile retrofit
+    compile retrofitCallAdapter
+    compile retrofitGsonConverter
+    compile rxJava
+    compile rxJavaAndroid
+
     testCompile junit
     testCompile mockito
     testCompile robolectric

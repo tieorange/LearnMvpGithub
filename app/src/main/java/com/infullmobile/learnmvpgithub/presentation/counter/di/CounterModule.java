@@ -34,7 +34,7 @@ public class CounterModule {
 	@CounterScope
 	@Provides
 	public CounterModel providesCounterModel() {
-		return new CounterModel();
+		return new CounterModel(1);
 	}
 
 	@CounterScope
