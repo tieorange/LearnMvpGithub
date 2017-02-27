@@ -12,6 +12,7 @@ open class GitHubPresenter(private val model: GitHubModel,
 
     override fun bind(intentBundle: Bundle, savedInstanceState: Bundle, intentData: Uri?) {
         reposList = model.getDummy(10)
+        presentedView.initRecycler(reposList)
     }
 
 

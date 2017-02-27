@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.infullmobile.android.infullmvp.PresentedActivityView
 import com.infullmobile.learnmvpgithub.R
+import com.infullmobile.learnmvpgithub.domain.model.Repo
 
 open class GitHubView()
     : PresentedActivityView<GitHubPresenter>() {
@@ -15,12 +16,11 @@ open class GitHubView()
     val recycler: RecyclerView by bindView(R.id.gitHubRecycler)
 
     override fun onViewsBound() {
-        initRecycler()
     }
 
-    private fun initRecycler() {
+    public fun initRecycler(list:List<Repo>) {
         recycler.layoutManager = LinearLayoutManager(context)
-        recycler.adapter = GitHubAdapter()
+        recycler.adapter = GitHubAdapter(context, list)
     }
 }
 
