@@ -2,13 +2,14 @@ package com.infullmobile.learnmvpgithub.presentation.counter.di;
 
 import android.support.annotation.VisibleForTesting;
 
+import com.infullmobile.learnmvpgithub.presentation.application.di.ApplicationComponent;
+import com.infullmobile.learnmvpgithub.presentation.application.di.Components;
 import com.infullmobile.learnmvpgithub.presentation.counter.CounterActivity;
 
 import dagger.Component;
 
 public class CounterGraph {
-/*
-	private final DaggerCounterGraph_CounterComponent.Builder builder;
+	/*private final DaggerCounterGraph_CounterComponent.Builder builder;
 
 	public CounterGraph(CounterActivity activity) {
 		this.builder = DaggerCounterGraph_CounterComponent
