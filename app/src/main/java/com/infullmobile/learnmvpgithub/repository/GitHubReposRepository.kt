@@ -19,5 +19,5 @@ class GitHubReposRepository(private val gitHubService: GitHubService) : ReposRep
 }
 
 private fun List<RepoEntity>.convertToRepo(): List<Repo> {
-    return map { Repo(it.name) }
+    return map(::Repo)
 }

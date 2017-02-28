@@ -38,8 +38,8 @@ class GitHubAdapter() : RecyclerView.Adapter<GitHubAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
         val name: TextView by bindView(R.id.repoListName)
-        fun bind(repoEntity: Repo) {
-
+        fun bind(repo: Repo) {
+            name.text = repo.name
         }
 
     }
