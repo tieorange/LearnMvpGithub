@@ -2,6 +2,7 @@ package com.infullmobile.learnmvpgithub.presentation.github.di
 
 import android.content.Context
 import com.infullmobile.learnmvpgithub.presentation.application.RepositoryModule
+import com.infullmobile.learnmvpgithub.presentation.application.ServiceModule
 import com.infullmobile.learnmvpgithub.presentation.github.*
 
 import com.infullmobile.learnmvpgithub.repository.ReposRepository
@@ -9,7 +10,7 @@ import com.infullmobile.learnmvpgithub.repository.ReposRepository
 import dagger.Module
 import dagger.Provides
 
-@Module(includes = arrayOf(RepositoryModule::class))
+@Module(includes = arrayOf(RepositoryModule::class, ServiceModule::class))
 class GitHubModule(private val activity: GitHubActivity) {
 
     @GitHubScope
@@ -21,7 +22,7 @@ class GitHubModule(private val activity: GitHubActivity) {
     @GitHubScope
     @Provides
     fun providesGitHubModel(repository: ReposRepository): GitHubModel {
-        return GitHubModel(null)
+        return GitHubModel(repository)
     }
 
     @GitHubScope
