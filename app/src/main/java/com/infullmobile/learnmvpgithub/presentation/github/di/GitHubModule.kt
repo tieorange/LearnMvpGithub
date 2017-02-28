@@ -27,7 +27,7 @@ class GitHubModule(private val activity: GitHubActivity) {
 
     @GitHubScope
     @Provides
-    internal fun providesGitHubView(adapter: GitHubAdapter): GitHubView {
+    internal fun providesGitHubView(adapter: RepoAdapter): GitHubView {
         return GitHubView(adapter)
     }
 
@@ -40,7 +40,7 @@ class GitHubModule(private val activity: GitHubActivity) {
 
     @GitHubScope
     @Provides
-    internal fun providesGitHubAdapter(): GitHubAdapter {
-        return GitHubAdapter()
+    internal fun providesGitHubAdapter(): RepoAdapter {
+        return RepoAdapter()
     }
 }
