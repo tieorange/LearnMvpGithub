@@ -1,6 +1,5 @@
 package com.infullmobile.learnmvpgithub.presentation.github
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import android.widget.TextView
 import com.infullmobile.android.infullmvp.bindView
 import com.infullmobile.learnmvpgithub.R
 import com.infullmobile.learnmvpgithub.domain.model.Repo
-import com.infullmobile.learnmvpgithub.repository.model.RepoEntity
 import java.util.*
 
 class GitHubAdapter() : RecyclerView.Adapter<GitHubAdapter.ViewHolder>() {

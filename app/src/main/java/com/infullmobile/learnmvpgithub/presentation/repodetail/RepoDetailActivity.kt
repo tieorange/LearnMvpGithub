@@ -1,11 +1,12 @@
-package com.infullmobile.learnmvpgithub.presentation.repo_detail
+package com.infullmobile.learnmvpgithub.presentation.repodetail
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.infullmobile.android.infullmvp.InFullMvpActivity
 import com.infullmobile.learnmvpgithub.domain.model.Repo
-import com.infullmobile.learnmvpgithub.presentation.repo_detail.di.RepoDetailGraph
+import com.infullmobile.learnmvpgithub.presentation.repodetail.di.RepoDetailGraph
+import java.io.Serializable
 import javax.inject.Inject
 
 class RepoDetailActivity : InFullMvpActivity<RepoDetailPresenter, RepoDetailView>() {
@@ -24,11 +25,10 @@ class RepoDetailActivity : InFullMvpActivity<RepoDetailPresenter, RepoDetailView
 
     override fun injectIntoGraph() {
         repoDetailGraph.inject(this)
-
     }
 
     companion object {
-        private val EXTRA_REPO = "EXTRA_REPO"
+        val EXTRA_REPO = "EXTRA_REPO"
 
         fun getIntent(context: Context, repo: Repo): Intent {
             val intent = Intent(context, RepoDetailActivity::class.java)

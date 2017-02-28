@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".presentation.tumblr.TumblrActivity" />
-        <activity android:name=".presentation.repo_detail.RepoDetailActivity" />
+        <activity android:name=".presentation.repodetail.RepoDetailActivity" />
     </application>
 
 </manifest>

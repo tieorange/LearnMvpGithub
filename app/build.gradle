@@ -49,6 +49,7 @@ dependencies {
         exclude module: 'support-annotations'
     }
     compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
 }
 repositories {
     mavenCentral()

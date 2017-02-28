@@ -1,8 +1,8 @@
-package com.infullmobile.learnmvpgithub.presentation.repo_detail.di
+package com.infullmobile.learnmvpgithub.presentation.repodetail.di
 
 import android.support.annotation.VisibleForTesting
 
-import com.infullmobile.learnmvpgithub.presentation.repo_detail.RepoDetailActivity
+import com.infullmobile.learnmvpgithub.presentation.repodetail.RepoDetailActivity
 import com.infullmobile.learnmvpgithub.presentation.application.di.ApplicationComponent
 import com.infullmobile.learnmvpgithub.presentation.application.di.Components
 
