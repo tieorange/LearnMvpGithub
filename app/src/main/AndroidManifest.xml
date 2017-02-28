@@ -16,10 +16,12 @@
         <activity android:name=".presentation.github.GitHubActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".presentation.tumblr.TumblrActivity" />
+        <activity android:name=".presentation.repo_detail.RepoDetailActivity" />
     </application>
 
 </manifest>
