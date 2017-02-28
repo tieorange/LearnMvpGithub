@@ -1,4 +1,4 @@
-package com.infullmobile.learnmvpgithub.presentation.github.git_hub
+package com.infullmobile.learnmvpgithub.presentation.github
 
 import com.infullmobile.learnmvpgithub.domain.model.Repo
 import com.infullmobile.learnmvpgithub.repository.ReposRepository
@@ -6,13 +6,13 @@ import com.infullmobile.learnmvpgithub.repository.model.RepoEntity
 import io.reactivex.Single
 import java.util.*
 
-open class GitHubModel() {
+open class GitHubModel(private val repository: ReposRepository?) {
 
     fun getDummy(count: Int): List<RepoEntity> {
         val list = (0..count).map { getDummyItem(it) }
         return list
     }
-//    fun loadRepoList(): Single<List<Repo>> = userLoadsRepoList.perform()
+    fun loadRepoList(): Single<List<Repo>> = repository?.getAllRepos()!! //TODO: remove "!!"
 
     fun getDummyItem(i: Int): RepoEntity {
         return RepoEntity("RepoEntity #$i")

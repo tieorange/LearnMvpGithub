@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".presentation.counter.CounterActivity" />
-        <activity android:name=".presentation.github.git_hub.GitHubActivity" />
+        <activity android:name=".presentation.github.GitHubActivity" />
         <activity android:name=".presentation.tumblr.TumblrActivity" />
     </application>
 

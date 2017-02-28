@@ -1,4 +1,4 @@
-package com.infullmobile.learnmvpgithub.presentation.github.git_hub
+package com.infullmobile.learnmvpgithub.presentation.github
 
 import android.support.annotation.LayoutRes
 import android.support.v7.widget.LinearLayoutManager

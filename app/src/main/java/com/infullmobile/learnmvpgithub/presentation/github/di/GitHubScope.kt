@@ -1,4 +1,4 @@
-package com.infullmobile.learnmvpgithub.presentation.github.git_hub.di
+package com.infullmobile.learnmvpgithub.presentation.github.di
 
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy

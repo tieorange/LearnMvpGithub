@@ -1,4 +1,4 @@
-package com.infullmobile.learnmvpgithub.presentation.github.git_hub
+package com.infullmobile.learnmvpgithub.presentation.github
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -38,7 +38,7 @@ class GitHubAdapter() : RecyclerView.Adapter<GitHubAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
         val name: TextView by bindView(R.id.repoListName)
-        fun bind(repoEntity: RepoEntity) {
+        fun bind(repoEntity: Repo) {
 
         }
 

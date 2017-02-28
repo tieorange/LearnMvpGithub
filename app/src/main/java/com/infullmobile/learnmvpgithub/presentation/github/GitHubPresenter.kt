@@ -1,4 +1,4 @@
-package com.infullmobile.learnmvpgithub.presentation.github.git_hub
+package com.infullmobile.learnmvpgithub.presentation.github
 
 import android.net.Uri
 import android.os.Bundle
@@ -11,11 +11,12 @@ open class GitHubPresenter(private val model: GitHubModel,
 
     override fun bind(intentBundle: Bundle, savedInstanceState: Bundle, intentData: Uri?) {
         model.loadRepoList()
-                .subscribe(
-                        { reposList -> presentedView.displayRepoList(reposList) }, {
-                    // error
-                }
-                )
+                .subscribe({
+                               reposList ->
+                               presentedView.displayRepoList(reposList)
+                           }, {
+                               // error
+                           })
     }
 
 

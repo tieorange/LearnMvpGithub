@@ -1,10 +1,10 @@
-package com.infullmobile.learnmvpgithub.presentation.github.git_hub
+package com.infullmobile.learnmvpgithub.presentation.github
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.infullmobile.android.infullmvp.InFullMvpActivity
-import com.infullmobile.learnmvpgithub.presentation.github.git_hub.di.GitHubGraph
+import com.infullmobile.learnmvpgithub.presentation.github.di.GitHubGraph
 import javax.inject.Inject
 
 class GitHubActivity : InFullMvpActivity<GitHubPresenter, GitHubView>() {
