@@ -11,8 +11,13 @@ import io.reactivex.Single
 
 class GitHubReposRepository(private val gitHubService: GitHubService) : ReposRepository {
     override fun getAllRepos(): Single<List<Repo>> {
-        return gitHubService.getAllRepos()
-                .map { emptyList<Repo>()}
+        val allRepos = gitHubService.getAllRepos()
+        val map: Single<List<Repo>> = allRepos.map { it.convertToRepo() }
+        return map
     }
 
+}
+
+private fun List<RepoEntity>.convertToRepo(): List<Repo> {
+    return map { Repo(it.name) }
 }
