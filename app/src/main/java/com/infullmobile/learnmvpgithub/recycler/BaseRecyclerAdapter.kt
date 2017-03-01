@@ -3,6 +3,7 @@ package condeandfurious.lungsshoe.presentation.recycler
 import android.support.annotation.LayoutRes
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,9 +20,9 @@ abstract class BaseRecyclerAdapter<ItemType : Any> : RecyclerView.Adapter<BaseRe
     val isNotEmpty: Boolean
         get() = data.isNotEmpty()
 
+
     var onItemClickListener: OnItemClickListener<ItemType> = object : OnItemClickListener<ItemType> {
         override fun onItemClick(item: ItemType) {
-            /*EMPTY*/
         }
     }
 

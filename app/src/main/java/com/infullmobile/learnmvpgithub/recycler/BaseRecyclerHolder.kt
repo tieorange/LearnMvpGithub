@@ -1,6 +1,7 @@
 package condeandfurious.lungsshoe.presentation.recycler
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 
 /**
@@ -10,7 +11,7 @@ open class BaseRecyclerHolder<ItemType : Any>(view: View) : RecyclerView.ViewHol
 
     var onItemClickListener: OnItemClickListener<ItemType> = object : OnItemClickListener<ItemType> {
         override fun onItemClick(item: ItemType) {
-            /*EMPTY*/
+            Log.e("MUFFASA", "WTF")
         }
     }
 

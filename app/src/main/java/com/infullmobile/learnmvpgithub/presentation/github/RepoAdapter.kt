@@ -23,6 +23,7 @@ class RepoAdapter() : BaseRecyclerAdapter<Repo>() {
         val name: TextView by bindView(R.id.repoListName)
 
         override fun displayItem(item: Repo) {
+            super.displayItem(item)
             name.text = item.name
         }
     }
