@@ -29,14 +29,9 @@ open class GitHubView(private val repoAdapter: RepoAdapter)
         initRecycler()
     }
 
-    public fun initRecycler() {
+    fun initRecycler() {
         repoAdapter.onItemClickListener = object : OnItemClickListener<Repo> {
-            override fun onItemClick(item: Repo) {
-                 presenter.openDetailActivity(item)
-
-                val intent = RepoDetailActivity.getIntent(context, item)
-                LaunchableIntent(activity, intent).start()
-            }
+            override fun onItemClick(item: Repo) = presenter.openDetailActivity(item)
         }
         recycler.adapter = repoAdapter
     }

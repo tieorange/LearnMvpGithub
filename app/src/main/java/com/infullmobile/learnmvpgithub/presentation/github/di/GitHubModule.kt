@@ -3,6 +3,8 @@ package com.infullmobile.learnmvpgithub.presentation.github.di
 import android.content.Context
 import com.infullmobile.learnmvpgithub.presentation.application.RepositoryModule
 import com.infullmobile.learnmvpgithub.presentation.application.ServiceModule
+import com.infullmobile.learnmvpgithub.presentation.common.ActivityNavigation
+import com.infullmobile.learnmvpgithub.presentation.common.Navigator
 import com.infullmobile.learnmvpgithub.presentation.github.*
 
 import com.infullmobile.learnmvpgithub.repository.ReposRepository
@@ -34,8 +36,15 @@ class GitHubModule(private val activity: GitHubActivity) {
     @GitHubScope
     @Provides
     internal fun providesGitHubPresenter(model: GitHubModel,
-                                         view: GitHubView): GitHubPresenter {
-        return GitHubPresenter(model, view)
+                                         view: GitHubView,
+                                         navigator: Navigator): GitHubPresenter {
+        return GitHubPresenter(model, view, navigator)
+    }
+
+    @GitHubScope
+    @Provides
+    internal fun providesNavigator(): Navigator {
+        return ActivityNavigation(activity)
     }
 
     @GitHubScope
