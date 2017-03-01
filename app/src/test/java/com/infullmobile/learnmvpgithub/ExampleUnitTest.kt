@@ -5,6 +5,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import org.mockito.Mockito
 import org.mockito.Mockito.mock
+import org.mockito.Mockito.verify
 import java.util.*
 
 /**
@@ -25,9 +26,20 @@ class ExampleUnitTest {
         val mockedList = mock(LinkedList::class.java)
         Mockito.`when`(mockedList[0]).thenReturn("first")
 
-        println("mockedList[0] = ${mockedList[0]}")
+        val first = mockedList[0]
+        assertEquals("must be FIRST", "first", first)
+        println("mockedList[0] = $first")
 
-        println("mockedList[999] = ${mockedList[999]}")
+        val last = mockedList[999]
+        assertEquals("must be null", null, last)
+        println("mockedList[999] = $last")
+    }
 
+    @Test
+    fun verifyMethodCalled(){
+        val list = mock(ArrayList::class.java)
+        list.clear()
+
+        verify(list).clear()
     }
 }

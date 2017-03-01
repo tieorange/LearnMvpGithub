@@ -10,6 +10,7 @@ open class CounterPresenter(private val model: CounterModel,
 
     override fun bind(intentBundle: Bundle, savedInstanceState: Bundle, intentData: Uri?) {
         counter = model.counter
+        presentedView.displayCounter(counter)
     }
 
     fun incrementCounter() {

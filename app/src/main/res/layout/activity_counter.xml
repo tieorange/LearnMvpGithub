@@ -12,4 +12,23 @@
         android:padding="6dp"
         tools:text="1" />
 
+    <Button
+        android:id="@+id/counterDecrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="--"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp" />
+
+    <Button
+        android:id="@+id/counterIncrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/counterDecrease"
+        android:layout_marginEnd="14dp"
+        android:text="++" />
+
 </RelativeLayout>

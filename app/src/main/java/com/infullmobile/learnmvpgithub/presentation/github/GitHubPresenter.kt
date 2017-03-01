@@ -18,6 +18,10 @@ open class GitHubPresenter(private val model: GitHubModel,
 
 
     override fun bind(intentBundle: Bundle, savedInstanceState: Bundle, intentData: Uri?) {
+        loadRepoList()
+    }
+
+    fun loadRepoList() {
         model.loadRepoList()
                 .subscribeOn(IoScheduler())
                 .observeOn(AndroidSchedulers.mainThread())
